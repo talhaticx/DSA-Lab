@@ -37,10 +37,11 @@ class SLList:
         return self.size
     
 
-L = SLList()
-L.AddFirst(5)
-L.AddFirst(10)
-L.AddLast(15)
+if __name__ == "__main__":
+    L = SLList()
+    L.AddFirst(5)
+    L.AddFirst(10)
+    L.AddLast(15)
 
-print(L.sentinel.next.item)
-assert(L.sentinel.next.item == 10)
+    print(L.sentinel.next.item)
+    assert(L.sentinel.next.item == 10)
