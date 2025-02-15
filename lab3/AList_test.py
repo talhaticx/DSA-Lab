@@ -1,6 +1,5 @@
 import time
 import tracemalloc
-import gc
 from cprint import *
 from AList import AList  
 
@@ -78,7 +77,6 @@ def test_memory_usage(n=1000):
         progress_loader(i+1, n, prefix="Testing")
         L.removeLast()
     
-    gc.collect()
     after_mem = tracemalloc.get_traced_memory()[0]
     tracemalloc.stop()
     
